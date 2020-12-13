@@ -1,0 +1,16 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+    <p>welcome {{name}}</p>
+    <button routerLink="/todos" mat-raised-button>Manage Todos</button>
+    <br />
+    <button style="height:40px;width:180px" *ngIf="!loading " (click)="getWelcomeMsg()" mat-button mat-raised-button
+        color="primary">
+        Get Welcome Message
+    </button>
+    <button fxLayout="column" fxLayoutAlign="center center" style="height:40px;width:180px" mat-button *ngIf="loading"
+        mat-raised-button color="primary">
+        <mat-spinner diameter="20"></mat-spinner>
+    </button>
+    <h2 *ngIf="message && !loading ">
+        {{  message  }}
+    </h2>
+</div>

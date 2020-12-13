@@ -1,0 +1,28 @@
+td.mat-cell {
+  border: none;
+}
+
+tr.mat-header-row.cdk-header-row {
+  border: none !important;
+  background: #3f51b5;
+}
+
+th.mat-header-cell {
+  color: #fff !important;
+}
+
+th {
+  border: none !important;
+}
+
+td.mat-row {
+  border: none;
+}
+
+tbody {
+  border: none;
+}
+
+tr.mat-row.cdk-row {
+  border: none !important;
+}

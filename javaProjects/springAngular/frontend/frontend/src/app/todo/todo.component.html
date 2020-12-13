@@ -1,0 +1,27 @@
+<div>
+    <mat-card>
+        <form #f="ngForm" (ngSubmit)="!f.invalid && saveTodo()" #f="ngForm" fxLayoutAlign="center center"
+            fxLayoutGap="18px" fxLayout="column">
+            <mat-form-field style="width:12rem;">
+                <textarea #desc="ngModel" minlength="5" rows="3" name="description" placeholder="Description"
+                    autocomplete="off" required [(ngModel)]="todo.description" matInput>
+                </textarea>
+                <mat-error *ngIf="desc.hasError('required')">
+                    Description is required
+                </mat-error>
+                <mat-error *ngIf="!desc.hasError('required')">
+                    Description must atleast have 5 characters
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field style="width:12rem;">
+                <input ngModel [(ngModel)]="todo.targetDate" name="targetdate" required matInput
+                    [matDatepicker]="picker" placeholder="Target Date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <button mat-raised-button color="primary">
+                Save
+            </button>
+        </form>
+    </mat-card>
+</div>

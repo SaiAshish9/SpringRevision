@@ -1,0 +1,28 @@
+<mat-toolbar class="mat-elevation-z10" style="width: 100vw;" color="primary">
+    <mat-toolbar-row>
+        <button *ngIf="hardcodedAuthService.isUserLoggedIn()" routerLink="/welcome/spring.angular" mat-icon-button>
+            <mat-icon>
+                home
+            </mat-icon>
+        </button>
+        <div fxFlex fxLayout fxLayoutAlign="flex-end">
+            <button *ngIf="hardcodedAuthService.isUserLoggedIn()" routerLink="/todos" mat-icon-button>
+                <mat-icon>
+                    receipt-long
+                </mat-icon>
+            </button>
+            <button *ngIf="!hardcodedAuthService.isUserLoggedIn()" routerLink="/login" mat-icon-button>
+                <mat-icon>
+                    login
+                </mat-icon>
+            </button>
+            <button *ngIf="hardcodedAuthService.isUserLoggedIn()" routerLink="/logout" mat-icon-button>
+                <mat-icon>
+                    logout
+                </mat-icon>
+            </button>
+        </div>
+
+    </mat-toolbar-row>
+
+</mat-toolbar>

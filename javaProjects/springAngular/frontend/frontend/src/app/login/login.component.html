@@ -1,0 +1,17 @@
+<div>
+    <mat-card>
+        <form #f="ngForm" fxLayoutAlign="center center" fxLayoutGap="10px" fxLayout="column">
+            <mat-form-field>
+                <input name="username" placeholder="username" autocomplete="off" required [(ngModel)]="username"
+                    matInput #username1="ngModel" />
+            </mat-form-field>
+            <mat-form-field>
+                <input type="password" placeholder="password" autocomplete="off" name="password" password required
+                    matInput #password1="ngModel" ngModel [(ngModel)]="password" />
+            </mat-form-field>
+            <button (click)="handleBasicAuthLogin()" mat-raised-button color="primary">
+                Submit
+            </button>
+        </form>
+    </mat-card>
+</div>
